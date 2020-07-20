@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/bin/sh
 
 pw user add radarr -c radarr -u 352 -d /nonexistent -s /usr/bin/nologin
 
