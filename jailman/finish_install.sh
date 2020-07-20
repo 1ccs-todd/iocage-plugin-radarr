@@ -2,7 +2,7 @@
 # This file contains the install script for radarr
 
 #init jail
-initblueprint "$1"
+initplugin "$1"
 
 # Initialise defaults
 
@@ -20,4 +20,4 @@ iocage exec "$1" chown -R radarr:radarr /usr/local/share/Radarr /config
 
 iocage exec "$1" service radarr restart
 
-exitblueprint "$1"
+exitplugin "$1"

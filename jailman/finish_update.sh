@@ -2,7 +2,7 @@
 # This file contains the update script for radarr
 
 #init jail
-initblueprint "$1"
+initplugin "$1"
 
 # Initialise defaults
 
@@ -18,6 +18,6 @@ iocage exec "$1" "tar -xzvf /usr/local/share/${FILE_NAME} -C /usr/local/share"
 iocage exec "$1" rm /usr/local/share/"${FILE_NAME}"
 
 iocage exec "$1" chown -R radarr:radarr /usr/local/share/Radarr /config
-cp "${SCRIPT_DIR}"/blueprints/radarr/includes/radarr.rc /mnt/"${global_dataset_iocage}"/jails/"$1"/root/usr/local/etc/rc.d/radarr
+cp "${SCRIPT_DIR}"/plugins/radarr/includes/radarr.rc /mnt/"${global_dataset_iocage}"/jails/"$1"/root/usr/local/etc/rc.d/radarr
 iocage exec "$1" chmod u+x /usr/local/etc/rc.d/radarr
 iocage exec "$1" service radarr restart
