@@ -7,7 +7,7 @@ pw user add radarr -c radarr -u 352 -d /nonexistent -s /usr/bin/nologin
 fetch -o /usr/local/share "${DOWNLOAD}"
 tar -xzvf /usr/local/share/${FILE_NAME} -C /usr/local/share
 rm /usr/local/share/"${FILE_NAME}"
-chmod 755 /usr/local/radarr
+chmod 755 /usr/local/share/radarr
 chmod u+x /usr/local/etc/rc.d/radarr
 sysrc "radarr_enable=YES"
 
